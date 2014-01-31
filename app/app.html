@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ngDevConf">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <title>AngularDevConf</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/app.css" rel="stylesheet">
+    <link href="../css/app.css" rel="stylesheet">
 </head>
 
 <body>
@@ -49,11 +49,6 @@
                     </ul>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="../navbar/">Default</a></li>
-                <li><a href="../navbar-static-top/">Static top</a></li>
-                <li class="active"><a href="./">Fixed top</a></li>
-            </ul>
         </div>
         <!--/.nav-collapse -->
     </div>
@@ -61,19 +56,7 @@
 
 <div class="container">
 
-    <!-- Main component for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <h1>Navbar example</h1>
-
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It
-            includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-
-        <p>
-            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
-    </div>
+    <div data-ng-view></div>
 
 </div>
 <!-- /container -->
@@ -82,8 +65,15 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="bower_components/jquery/jquery.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../bower_components/jquery/jquery.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/angular-route/angular-route.min.js"></script>
+
+<script src="app.js"></script>
+<script src="search/searchCtrl.js"></script>
+<script src="detail/detailCtrl.js"></script>
 
 </body>
 </html>
