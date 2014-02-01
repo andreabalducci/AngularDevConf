@@ -1,6 +1,7 @@
 <div class="row searchresults">
-    <div ng-repeat="image in vm.results" class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
-        <img ng-src="{{image.uri}}" alt="{{image.title}}" class="img-thumbnail"/>
+    <div ng-repeat="image in vm.results" class="col-lg-2 col-md-3 col-sm-4 col-xs-6 item">
+        <img ng-src="{{image.uri}}" alt="{{image.title}}"/>
+        <div class="title">{{image.title}}</div>
     </div>
 </div>
 

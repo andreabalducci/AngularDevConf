@@ -16,6 +16,26 @@ a {
     font-weight: bold;
 }
 
-.searchresults div{
+.searchresults .item{
     margin-bottom: 33px;
+    padding: 4px;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.searchresults .item img{
+    width: 100%;
+}
+
+.searchresults .item .title{
+    background-color: darkgray;
+    color: white;
+    padding: 2px;
+    opacity: 0.8;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+
 }
