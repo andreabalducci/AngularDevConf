@@ -1,60 +1,72 @@
 [
     {
+        "id":1,
         "title": "Portonovo",
         "uri": "../catalog/1.jpg",
         "location": "Ancona"
     },
     {
+        "id":2,
         "title": "Santa Maria",
         "uri": "../catalog/2.jpg",
         "location": "Ancona"
     },
     {
+        "id":3,
         "title": "13 Cannelle",
         "uri": "../catalog/3.jpg",
         "location": "Ancona"
     },
     {
-        "title": "Working @ AngularDevConf",
+        "id":4,
+        "title": "Demo",
         "uri": "../catalog/4.jpg",
         "location": "Castelfidardo"
     },
     {
+        "id":5,
         "title": "Verza",
         "uri": "../catalog/5.jpg",
         "location": "Castelfidardo"
     },
     {
+        "id":6,
         "title": "Clandestino Sushi bar",
         "uri": "../catalog/6.jpg",
         "location": "Ancona"
     },
     {
+        "id":7,
         "title": "Pippo!",
         "uri": "../catalog/7.jpg",
         "location": "Castelfidardo"
     },
     {
+        "id":8,
         "title": "Tramonto",
         "uri": "../catalog/8.jpg",
         "location": "Loreto"
     },
     {
+        "id":9,
         "title": "Porto al tramonto",
         "uri": "../catalog/9.jpg",
         "location": "Ancona"
     },
     {
-        "title": "Venditore di ombrelli a San Michele",
+        "id":10,
+        "title": "San Michele",
         "uri": "../catalog/10.jpg",
         "location": "Sirolo"
     },
     {
+        "id":11,
         "title": "Castelluccio di Norcia",
         "uri": "../catalog/11.jpg",
         "location": "Castelluccio di Norcia"
     },
     {
+        "id":12,
         "title": "Mezzavalle",
         "uri": "../catalog/12.jpg",
         "location": "Ancona"

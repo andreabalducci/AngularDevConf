@@ -1,1 +1,22 @@
-detail
+<div class="row">
+    <div class="col-md-5">
+        <img ng-src="{{vm.image.uri}}" style="width: 100%">
+    </div>
+    <div class="col-md-7">
+        <h2>{{vm.image.title}}</h2>
+
+        <h3>{{vm.image.location}}</h3>
+
+        <btn class="btn btn-primary" ng-if="vm.showBack">
+            <span class="glyphicon glyphicon-backward"></span>
+            back to search
+        </btn>
+    </div>
+</div>
+
+<div class="row debug-pane" ng-if="debug">
+    <div class="col-sm-12">
+        <h5>Viewmodel</h5>
+        <pre>{{vm | json}}</pre>
+    </div>
+</div>

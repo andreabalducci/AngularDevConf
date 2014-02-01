@@ -1,3 +1,13 @@
-angular.module('ngDevConf').controller('detailCtrl', function ($scope) {
-    console.log('detail controller');
-});
+angular.module('ngDevConf').controller('detailCtrl',
+    function ($scope, $routeParams, catalogService, $window) {
+        var id = $routeParams.id;
+
+        $scope.vm = {
+            id: id,
+            showBack : false
+        };
+
+        catalogService.getById(id).then(function (data) {
+            $scope.vm.image = data;
+        });
+    });

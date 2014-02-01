@@ -6,12 +6,14 @@
         <div class="item"
              ng-mouseenter="image.showTitle = true"
              ng-mouseleave="image.showTitle = false">
-            <img ng-src="{{image.uri}}" alt="{{image.title}}" />
+            <a href="#/detail/{{image.id}}">
+                <img ng-src="{{image.uri}}" alt="{{image.title}}"/>
 
-            <div class="title" ng-show="image.showTitle">
-                <div class="background"></div>
-                <div class="text">{{image.title}}</div>
-            </div>
+                <div class="title" ng-show="image.showTitle">
+                    <div class="background"></div>
+                    <div class="text">{{image.title}}</div>
+                </div>
+            </a>
         </div>
     </div>
 </div>

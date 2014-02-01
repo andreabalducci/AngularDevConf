@@ -1,22 +1,55 @@
-angular.module('catalog', []).service('catalogService', function($q, $http){
+angular.module('catalog', []).service('catalogService', function ($q, $http, $log) {
 
-    this.search = function(term){
+    var localCache;
+
+    function filter(items, term) {
+        if (!term)
+            return items;
+
+        var expression = new RegExp(term, "i");
+
+        var matches = _.filter(items, function (item) {
+            return  expression.test(item.title) ||
+                expression.test(item.location);
+        });
+
+        return matches;
+    };
+
+    function loadRemoteData() {
         var defer = $q.defer();
 
-        $http.get('../catalog/index.json').then(function(results){
+        if (!localCache) {
+            $http.get('../catalog/index.json').then(function (results) {
+                localCache = results.data;
+                defer.resolve(localCache);
+            });
+        }else{
+            defer.resolve(localCache);
+        }
 
-            var searchResult = results.data;
+        return defer.promise;
+    }
 
-            if(term){
-                var expression = new RegExp(term,"i");
+    this.search = function (term) {
+        $log.log('searching ', term);
+        var defer = $q.defer();
 
-                searchResult = _.filter(searchResult, function(item){
-                    return  expression.test(item.title)||
-                            expression.test(item.location);
-                });
-            }
+        loadRemoteData().then(function (results) {
+            console.log('results', results);
+            defer.resolve(filter(results, term));
+        });
 
-            defer.resolve(searchResult);
+        return defer.promise;
+    }
+
+    this.getById = function (id) {
+        var defer = $q.defer();
+
+        loadRemoteData().then(function (results) {
+            defer.resolve(_.find(results, function(item){
+                return item.id == id;
+            }));
         });
 
         return defer.promise;
