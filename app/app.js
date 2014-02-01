@@ -1,5 +1,5 @@
 angular
-    .module('ngDevConf', ['ngRoute'])
+    .module('ngDevConf', ['ngRoute', 'catalog'])
     .config(['$routeProvider',
         function ($routeProvider) {
             $routeProvider.
