@@ -4,7 +4,15 @@ angular.module('ngDevConf').controller('searchCtrl',
             searchTerm : $location.search().q || ''
         };
 
-        catalogService.search($scope.vm.searchTerm).then(function(results){
-            $scope.vm.results = results;
-        });
+        function search(term){
+            catalogService.search(term).then(function(results){
+                $scope.vm.results = results;
+            });
+        }
+
+        $scope.showAll = function(){
+            search('');
+        }
+
+        search($scope.vm.searchTerm);
     });

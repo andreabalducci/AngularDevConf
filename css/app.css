@@ -11,9 +11,8 @@ a {
     margin-top: 40px;
 }
 
-.debug-on{
+.toggle-on{
     color : red !important;
-    font-weight: bold;
 }
 
 .searchresults .item{

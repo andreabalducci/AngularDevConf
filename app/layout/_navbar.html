@@ -12,8 +12,13 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a ng-click="toggleDebugMode()" ng-class="{'debug-on':debug}">
+                    <a ng-click="toggleDebugMode()" ng-class="{'toggle-on':debug}">
                         Debug {{ debug ? 'On' : 'Off' }}
+                    </a>
+                </li>
+                <li>
+                    <a ng-click="toggleLiveSearch()" ng-class="{'toggle-on':debug}">
+                        Live search {{ debug ? 'On' : 'Off' }}
                     </a>
                 </li>
             </ul>

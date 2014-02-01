@@ -18,6 +18,21 @@
     </div>
 </div>
 
+<div class="row" ng-show="!(vm.results && vm.results.length)">
+    <div class="col-sm-12">
+        <div class="jumbotron alert-danger">
+            <h2>
+                <span class="glyphicon glyphicon-warning-sign">
+
+                </span> La ricerca non ha prodotto risultati</h2>
+
+            <p>Cambia i criteri di ricerca o <a ng-click="showAll()">visualizza tutto il catalogo</a></p>
+
+        </div>
+    </div>
+</div>
+
+
 <div class="row debug-pane" ng-if="debug">
     <div class="col-sm-12">
         <h5>Viewmodel</h5>
