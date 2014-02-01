@@ -7,12 +7,16 @@ angular
                     templateUrl: 'search/index.html',
                     controller: 'searchCtrl'
                 }).
+                when('/', {
+                    templateUrl: 'home/index.html',
+                    controller: 'homeCtrl'
+                }).
                 when('/detail/:id', {
                     templateUrl: 'detail/index.html',
                     controller: 'detailCtrl'
                 }).
                 otherwise({
-                    redirectTo: '/search'
+                    redirectTo: '/home'
                 });
         }]);
 
