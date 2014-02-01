@@ -2,3 +2,16 @@ body {
     min-height: 2000px;
     padding-top: 70px;
 }
+
+a {
+    cursor: pointer;
+}
+
+.debug-pane {
+    margin-top: 40px;
+}
+
+.debug-on{
+    color : red !important;
+    font-weight: bold;
+}

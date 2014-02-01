@@ -1,3 +1,3 @@
-angular.module('ngDevConf').controller('searchCtrl', function ($scope) {
-    console.log('search controller');
+angular.module('ngDevConf').controller('searchCtrl', function ($scope, $location) {
+    $scope.searchTerm = $location.search().q || '';
 });
