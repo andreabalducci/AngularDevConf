@@ -1,11 +1,22 @@
 <div class="row searchresults">
-    <div ng-repeat="image in vm.results" class="col-lg-2 col-md-3 col-sm-4 col-xs-6 item">
-        <img ng-src="{{image.uri}}" alt="{{image.title}}"/>
-        <div class="title">{{image.title}}</div>
+    <div ng-repeat="image in vm.results"
+         class="col-lg-2 col-md-3 col-sm-4 col-xs-6"
+            >
+
+        <div class="item"
+             ng-mouseenter="image.showTitle = true"
+             ng-mouseleave="image.showTitle = false">
+            <img ng-src="{{image.uri}}" alt="{{image.title}}" />
+
+            <div class="title" ng-show="image.showTitle">
+                <div class="background"></div>
+                <div class="text">{{image.title}}</div>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="row debug-pane" ng-if="debug" >
+<div class="row debug-pane" ng-if="debug">
     <div class="col-sm-12">
         <h5>Viewmodel</h5>
         <pre>{{vm | json}}</pre>
