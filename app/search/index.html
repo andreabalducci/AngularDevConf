@@ -1,4 +1,8 @@
-search
+<div class="row searchresults">
+    <div ng-repeat="image in vm.results" class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <img ng-src="{{image.uri}}" alt="{{image.title}}" class="img-thumbnail"/>
+    </div>
+</div>
 
 <div class="row debug-pane" ng-if="debug" >
     <div class="col-sm-12">

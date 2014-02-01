@@ -1,11 +1,11 @@
-angular.module('catalog', []).service('catalogService', function($q){
+angular.module('catalog', []).service('catalogService', function($q, $http){
+
     this.search = function(term){
         var defer = $q.defer();
 
-        defer.resolve([{
-            id:'1',
-            text:'text'
-        }]);
+        $http.get('../catalog/index.json').then(function(results){
+            defer.resolve(results.data);
+        });
 
         return defer.promise;
     }

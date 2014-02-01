@@ -15,3 +15,7 @@ a {
     color : red !important;
     font-weight: bold;
 }
+
+.searchresults div{
+    margin-bottom: 33px;
+}
