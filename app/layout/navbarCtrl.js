@@ -1,6 +1,5 @@
 angular.module('ngDevConf')
     .controller('navbarCtrl', function ($scope, $location) {
-        var liveSearchEnabled = true;
 
         $scope.doSearch = function (term) {
             term = term || $scope.term || '';
@@ -8,7 +7,7 @@ angular.module('ngDevConf')
         }
 
         $scope.searchTextChanged = function(){
-            if(liveSearchEnabled){
+            if($scope.liveSearchEnabled){
                 $scope.doSearch();
             }
         }
