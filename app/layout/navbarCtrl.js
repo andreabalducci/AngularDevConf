@@ -1,9 +1,12 @@
 angular.module('ngDevConf')
     .controller('navbarCtrl', function ($scope, $location) {
-
         $scope.doSearch = function (term) {
             term = term || $scope.term || '';
-            $location.path('search').search({q:term});
+            if($location.path() === '/search'){
+                $scope.sendMessage('searchTermChanged', term);
+            }else{
+                $location.path('search').search({q:term});
+            }
         }
 
         $scope.searchTextChanged = function(){

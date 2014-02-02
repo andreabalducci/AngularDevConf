@@ -9,12 +9,17 @@ angular.module('ngDevConf').controller('searchCtrl',
         function search(term){
             catalogService.search(term).then(function(results){
                 $scope.vm.results = results;
+                $scope.vm.searchTerm =  term;
             });
         }
 
         $scope.showAll = function(){
             search('');
         }
+
+        $scope.$on('searchTermChanged', function(event, param){
+            search(param);
+        });
 
         search($scope.vm.searchTerm);
     });

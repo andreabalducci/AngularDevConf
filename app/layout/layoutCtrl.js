@@ -15,5 +15,8 @@ angular.module('ngDevConf')
         $scope.setDebugInfo = function(info){
             $scope.debugInfo = info;
         }
-    });
 
+        $scope.sendMessage = function(message, args){
+            $scope.$broadcast(message,args);
+        }
+    });

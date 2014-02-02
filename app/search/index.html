@@ -1,11 +1,10 @@
 <div class="page-header">
-    <h1>Risultati della ricerca per <small>{{vm.searchTerm}}</small></h1>
+    <h1>Risultati della ricerca <span ng-show="vm.searchTerm">per </span> <small>{{vm.searchTerm}}</small></h1>
 </div>
 
 <div class="row searchresults">
     <div ng-repeat="image in vm.results"
-         class="col-lg-2 col-md-3 col-sm-4 col-xs-6"
-            >
+         class="col-lg-2 col-md-3 col-sm-4 col-xs-6 search-result-item" >
 
         <div class="item"
              ng-mouseenter="image.showTitle = true"
