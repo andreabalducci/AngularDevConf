@@ -50,3 +50,7 @@ a {
 .angular-google-map-container{
     height: 400px;
 }
+
+input.search-text{
+    width: 30em!important;
+}

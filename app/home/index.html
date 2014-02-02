@@ -2,35 +2,37 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img class="AngularJS-large" src="../img/AngularJS-large.png">
+                <img ng-src="{{vm.opening.logo}}">
                 <p>
-                    <em>"Angular is what HTML would have been had it been designed for applications"</em>
+                    <em>"{{vm.opening.spot}}"</em>
                 </p>
 
             </div>
             <div class="col-md-6">
-                <h3>Introduzione ad AngularJS</h3>
+                <h3>{{vm.opening.title}}</h3>
                 <p>
-                    Come realizzare Single Page Applications sfruttando databinding bidirezionale, templates,
-                    routing, controllers, componenti e servizi web creando passo passo un catalogo immagini.
+                    {{vm.opening.text}}
                 </p>
 
                 <p><a class="btn btn-primary btn-lg" role="button"
-                      href="http://www.dii.univpm.it/angulardevconf"
-                      target="_blank">Learn more »</a></p>
+                      href="{{vm.opening.link.url}}"
+                      target="_blank">{{vm.opening.link.text}}</a></p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container marketing">
+<div class="container">
     <div class="row">
-        <div class="col-md-4" ng-repeat="organizer in vm.organizers">
-            <img ng-src="{{organizer.logo}}" style="width: 90%;">
+        <div class="col-md-4" ng-repeat="slot in vm.marketing">
+            <img ng-src="{{slot.logo}}" style="width: 90%;">
 
-            <p>{{organizer.text}}</p>
+            <p>{{slot.text}}</p>
 
-            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+            <p><a class="btn btn-default"
+                  href="{{slot.link.url}}"
+                  target="_blank"
+                  role="button">{{slot.link.title}}</a></p>
         </div>
     </div>
 </div>
