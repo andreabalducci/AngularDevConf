@@ -11,5 +11,9 @@ angular.module('ngDevConf')
         $scope.toggleLiveSearch = function(){
             $scope.liveSearchEnabled =!$scope.liveSearchEnabled;
         }
+
+        $scope.setDebugInfo = function(info){
+            $scope.debugInfo = info;
+        }
     });
 

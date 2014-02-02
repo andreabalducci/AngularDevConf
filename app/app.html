@@ -23,6 +23,15 @@
 
 <div class="container-fluid">
     <div data-ng-view></div>
+
+
+    <div class="row debug-pane" ng-if="debug">
+        <div class="col-sm-12">
+            <h5>Debug</h5>
+            <pre>{{debugInfo | json}}</pre>
+        </div>
+    </div>
+
 </div>
 <!-- /container -->
 

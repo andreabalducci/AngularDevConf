@@ -7,6 +7,8 @@ angular.module('ngDevConf').controller('detailCtrl',
             showBack : false
         };
 
+        $scope.setDebugInfo($scope.vm);
+
         $scope.map = {
             center: {
                 latitude: 45,

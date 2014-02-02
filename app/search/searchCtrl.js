@@ -4,6 +4,8 @@ angular.module('ngDevConf').controller('searchCtrl',
             searchTerm : $location.search().q || ''
         };
 
+        $scope.setDebugInfo($scope.vm);
+
         function search(term){
             catalogService.search(term).then(function(results){
                 $scope.vm.results = results;
