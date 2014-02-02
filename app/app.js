@@ -5,7 +5,8 @@ angular
             $routeProvider.
                 when('/search', {
                     templateUrl: 'search/index.html',
-                    controller: 'searchCtrl'
+                    controller: 'searchCtrl',
+                    reloadOnSearch: false
                 }).
                 when('/', {
                     templateUrl: 'home/index.html',

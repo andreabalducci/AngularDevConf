@@ -10,6 +10,7 @@ angular.module('ngDevConf').controller('searchCtrl',
             catalogService.search(term).then(function(results){
                 $scope.vm.results = results;
                 $scope.vm.searchTerm =  term;
+                $location.search({q:term});
             });
         }
 
