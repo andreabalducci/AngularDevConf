@@ -61,7 +61,18 @@
         "id":7,
         "title": "Pippo!",
         "uri": "../catalog/7.jpg",
-        "location": "Castelfidardo"
+        "location": "Castelfidardo",
+        "map":{
+            "center": {
+                "latitude": 43.4635832,
+                "longitude": 13.5512896
+            },
+            "marker":{
+                "latitude": 43.4634714,
+                "longitude": 13.5517508
+            },
+            "zoom": 17
+        }
     },
     {
         "id":8,
