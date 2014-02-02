@@ -3,7 +3,18 @@
         "id":1,
         "title": "Portonovo",
         "uri": "../catalog/1.jpg",
-        "location": "Ancona"
+        "location": "Ancona",
+        "map":{
+            "center": {
+                "latitude": 43.5650819,
+                "longitude": 13.5949158
+            },
+            "marker":{
+                "latitude": 43.56515,
+                "longitude": 13.5949167
+            },
+            "zoom": 19
+        }
     },
     {
         "id":2,

@@ -1,13 +1,23 @@
 <div class="page-header">
-    <h1>{{vm.image.title}} <small>{{vm.image.location}}</small></h1>
+    <h1>{{vm.image.title}}
+        <small>{{vm.image.location}}</small>
+    </h1>
 </div>
 <div class="row">
     <div class="col-md-5">
         <img ng-src="{{vm.image.uri}}" style="width: 100%">
     </div>
     <div class="col-md-7">
-        <div style="height: 400px">
-            <google-map center='map.center' zoom='map.zoom'></google-map>
+        <div ng-if="vm.image.map">
+            <google-map
+                    center='vm.image.map.center'
+                    zoom='vm.image.map.zoom'
+                    draggable="true"
+                    type="SATELLITE"
+                    >
+                <marker coords='vm.image.map.marker'></marker>
+
+            </google-map>
         </div>
 
         <btn class="btn btn-primary" ng-if="vm.showBack">
