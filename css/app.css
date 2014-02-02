@@ -46,3 +46,7 @@ a {
     bottom:0px;
     position: absolute;
 }
+
+.angular-google-map-container{
+    height: 400px;
+}

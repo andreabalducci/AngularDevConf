@@ -1,6 +1,7 @@
 angular.module('catalog', []).service('catalogService', function ($q, $http, $log) {
 
     var localCache;
+    var mapById = {};
 
     function filter(items, term) {
         if (!term)
@@ -8,9 +9,14 @@ angular.module('catalog', []).service('catalogService', function ($q, $http, $lo
 
         var expression = new RegExp(term, "i");
 
-        var matches = _.filter(items, function (item) {
-            return  expression.test(item.title) ||
-                expression.test(item.location);
+        var matches = [];
+
+        angular.forEach(items, function (item) {
+            if (expression.test(item.title) || expression.test(item.location)) {
+                matches.push(item);
+            }
+
+            mapById[item.id] = item;
         });
 
         return matches;
@@ -24,7 +30,7 @@ angular.module('catalog', []).service('catalogService', function ($q, $http, $lo
                 localCache = results.data;
                 defer.resolve(localCache);
             });
-        }else{
+        } else {
             defer.resolve(localCache);
         }
 
@@ -47,9 +53,7 @@ angular.module('catalog', []).service('catalogService', function ($q, $http, $lo
         var defer = $q.defer();
 
         loadRemoteData().then(function (results) {
-            defer.resolve(_.find(results, function(item){
-                return item.id == id;
-            }));
+            defer.resolve(mapById[id]);
         });
 
         return defer.promise;

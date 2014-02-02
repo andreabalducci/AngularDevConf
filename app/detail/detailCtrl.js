@@ -7,6 +7,14 @@ angular.module('ngDevConf').controller('detailCtrl',
             showBack : false
         };
 
+        $scope.map = {
+            center: {
+                latitude: 45,
+                longitude: -73
+            },
+            zoom: 8
+        };
+
         catalogService.getById(id).then(function (data) {
             $scope.vm.image = data;
         });

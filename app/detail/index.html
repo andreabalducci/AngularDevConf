@@ -7,6 +7,10 @@
 
         <h3>{{vm.image.location}}</h3>
 
+        <div style="height: 400px">
+            <google-map center='map.center' zoom='map.zoom'></google-map>
+        </div>
+
         <btn class="btn btn-primary" ng-if="vm.showBack">
             <span class="glyphicon glyphicon-backward"></span>
             back to search

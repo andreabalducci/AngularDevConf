@@ -1,5 +1,5 @@
 angular
-    .module('ngDevConf', ['ngRoute', 'catalog'])
+    .module('ngDevConf', ['ngRoute', 'catalog', 'google-maps'])
     .config(['$routeProvider',
         function ($routeProvider) {
             $routeProvider.
