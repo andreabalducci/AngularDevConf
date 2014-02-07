@@ -1,0 +1,122 @@
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="1311" measuredH="788" mockupW="960" mockupH="720">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="351" y="68" w="960" h="720" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>AngularDevConf%0Ahttp%3A//andreabalducci.github.io/AngularDevConf/app/app.html</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="351" y="140" w="960" h="50" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderColor>0</borderColor>
+        <color>0</color>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="362" y="146" w="-1" h="-1" measuredW="213" measuredH="36" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>16777215</color>
+        <size>28</size>
+        <text>AngularDevConf</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Canvas" x="372" y="214" w="915" h="263" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>roundedSolid</borderStyle>
+        <color>13421772</color>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="__group__" x="387" y="510" w="258" h="235" measuredW="258" measuredH="235" zOrder="4" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="0" y="87" w="258" h="148" measuredW="200" measuredH="80" zOrder="0" locked="false" isInGroup="7">
+          <controlProperties>
+            <text>lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipisicing%20elit%2C%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20Ut%20enim%20ad%20minim%20veniam%2C%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="1" y="195" w="89" h="24" measuredW="60" measuredH="24" zOrder="1" locked="false" isInGroup="7">
+          <controlProperties>
+            <align>center</align>
+            <icon>RightArrowIcon%7Cxsmall</icon>
+            <menuIcon>false</menuIcon>
+            <text>GO</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Image" x="0" y="0" w="258" h="79" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="7"/>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="9" controlTypeID="__group__" x="702" y="510" w="258" h="235" measuredW="258" measuredH="235" zOrder="5" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="0" y="87" w="258" h="148" measuredW="200" measuredH="80" zOrder="0" locked="false" isInGroup="9">
+          <controlProperties>
+            <text>lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipisicing%20elit%2C%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20Ut%20enim%20ad%20minim%20veniam%2C%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="1" y="195" w="89" h="24" measuredW="60" measuredH="24" zOrder="1" locked="false" isInGroup="9">
+          <controlProperties>
+            <align>center</align>
+            <icon>RightArrowIcon%7Cxsmall</icon>
+            <menuIcon>false</menuIcon>
+            <text>GO</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Image" x="0" y="0" w="258" h="79" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="9"/>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="10" controlTypeID="__group__" x="1029" y="504" w="258" h="235" measuredW="258" measuredH="235" zOrder="6" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="0" y="87" w="258" h="148" measuredW="200" measuredH="80" zOrder="0" locked="false" isInGroup="10">
+          <controlProperties>
+            <text>lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipisicing%20elit%2C%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20Ut%20enim%20ad%20minim%20veniam%2C%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="1" y="195" w="89" h="24" measuredW="60" measuredH="24" zOrder="1" locked="false" isInGroup="10">
+          <controlProperties>
+            <align>center</align>
+            <icon>RightArrowIcon%7Cxsmall</icon>
+            <menuIcon>false</menuIcon>
+            <text>GO</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Image" x="0" y="0" w="258" h="79" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="10"/>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Image" x="387" y="236" w="446" h="214" measuredW="77" measuredH="79" zOrder="7" locked="false" isInGroup="-1"/>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Button" x="869" y="396" w="403" h="39" measuredW="194" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <color>545684</color>
+        <icon>ForwardIcon%7Csmall</icon>
+        <menuIcon>false</menuIcon>
+        <size>18</size>
+        <text>APPROFONDISCI</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Paragraph" x="869" y="290" w="403" h="91" measuredW="200" measuredH="80" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Duis%20aute%20irure%20dolor%20in%20reprehenderit%20in%20voluptate%20velit%20esse%20cillum%20dolore%20eu%20fugiat%20nulla%20pariatur.%20Excepteur%20sint%20occaecat%20cupidatat%20non%20proident%2C%20sunt%20in%20culpa%20qui%20officia%20deserunt%20mollit%20anim%20id%20est%20laborum.</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Title" x="869" y="237" w="389" h="-1" measuredW="99" measuredH="43" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <text>Titolo</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::SearchBox" x="820" y="149" w="323" h="-1" measuredW="120" measuredH="33" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="1248" y="155" w="-1" h="-1" measuredW="39" measuredH="21" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13369344</color>
+        <text>Debug</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Label" x="1158" y="155" w="-1" h="-1" measuredW="68" measuredH="21" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13369344</color>
+        <text>Live%20search</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
