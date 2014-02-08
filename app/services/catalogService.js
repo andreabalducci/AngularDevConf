@@ -4,7 +4,7 @@ angular.module('catalog', []).service('catalogService', function ($q, $http, $lo
     var mapById = {};
 
     var homeData =  {
-        opening:{
+        header:{
             "logo" :"../img/AngularJS-large.png",
             "spot" : "Angular is what HTML would have been had it been designed for applications",
             "title" :"Introduzione ad AngularJS",
