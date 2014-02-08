@@ -1,0 +1,48 @@
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="1311" measuredH="788" mockupW="960" mockupH="720">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="351" y="68" w="960" h="720" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>AngularDevConf%0Ahttp%3A//andreabalducci.github.io/AngularDevConf/app/app.html%23/detail/1</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="351" y="140" w="960" h="50" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderColor>0</borderColor>
+        <color>0</color>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="362" y="146" w="-1" h="-1" measuredW="213" measuredH="36" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>16777215</color>
+        <size>28</size>
+        <text>AngularDevConf</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Title" x="372" y="214" w="389" h="-1" measuredW="99" measuredH="43" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <text>Titolo</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::SearchBox" x="820" y="149" w="323" h="-1" measuredW="120" measuredH="33" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>term</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="1248" y="155" w="-1" h="-1" measuredW="39" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13369344</color>
+        <text>Debug</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Label" x="1158" y="155" w="-1" h="-1" measuredW="68" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13369344</color>
+        <text>Live%20search</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Image" x="372" y="262" w="442" h="453" measuredW="77" measuredH="79" zOrder="7" locked="false" isInGroup="-1"/>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Map" x="829" y="257" w="467" h="458" measuredW="252" measuredH="222" zOrder="8" locked="false" isInGroup="-1"/>
+  </controls>
+</mockup>
