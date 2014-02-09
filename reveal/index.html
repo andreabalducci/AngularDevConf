@@ -37,12 +37,14 @@
     <div class="slides">
         <section>
             <h4>Angular Dev Conf</h4>
+
             <div>
                 <br>
                 <br>
             </div>
             <h2>Introduzione ad</h2>
             <img src="../img/AngularJS-large.png" style="background-color: white">
+
             <div>
                 <br>
                 <br>
@@ -54,8 +56,102 @@
         <section>
             <h2>The Master Plan</h2>
         </section>
+        <section>
+            <p>
+                Come realizzare Single Page Applications sfruttando databinding bidirezionale, templates, routing,
+                controllers, componenti e servizi web creando passo passo un catalogo immagini.
+            </p>
+        </section>
+        <section>
+            <ol>
+                <li>Single Page Application</li>
+                <li>Databinding</li>
+                <li>Templates</li>
+                <li>Controllers</li>
+                <li>Routing</li>
+                <li>Servizi Web</li>
+                <li>Componenti</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Layout</h2>
+            <pre><code>&lt;html&gt;
+&lt;body&gt;
+    &lt;navbar/&gt;
+    &lt;container&gt;
+        &lt;view/&gt;
+        &lt;debug/&gt;
+    &lt;/container&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </section>
+        <section>
+            <h2>App Bootstrap</h2>
+            <pre><code>&lt;html ng-app=&quot;ngDevConf&quot;&gt;
+&lt;body&gt;
+    &lt;navbar/&gt;
+    &lt;container&gt;
+        &lt;view/&gt;
+        &lt;debug/&gt;
+    &lt;/container&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </section>
+        <section>
+            <h2>Controller di layout</h2>
+            <pre><code>&lt;html ng-app=&quot;ngDevConf&quot;&gt;
+&lt;body ng-controller=&quot;layoutCtrl&quot;&gt;
+    &lt;navbar/&gt;
+    &lt;container&gt;
+        &lt;view/&gt;
+        &lt;debug/&gt;
+    &lt;/container&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </section>
+        <section>
+            <h2>Inclusione Navbar</h2>
+            <pre><code>&lt;html ng-app=&quot;ngDevConf&quot;&gt;
+&lt;body ng-controller=&quot;layoutCtrl&quot;&gt;
+    &lt;div ng-include=&quot;'layout/_navbar.html'&quot;&gt;&lt;/div&gt;
+    &lt;container&gt;
+        &lt;view/&gt;
+        &lt;debug/&gt;
+    &lt;/container&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </section>
+        <section>
+            <h2>Placeholder per le view</h2>
+            <pre><code>&lt;html ng-app=&quot;ngDevConf&quot;&gt;
+&lt;body ng-controller=&quot;layoutCtrl&quot;&gt;
+    &lt;div ng-include=&quot;'layout/_navbar.html'&quot;&gt;&lt;/div&gt;
+    &lt;container&gt;
+        &lt;div ng-view &gt;&lt;/div&gt;
+        &lt;debug/&gt;
+    &lt;/container&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </section>
+        <section>
+            <h2>Area di debug</h2>
+            <pre><code>&lt;html ng-app=&quot;ngDevConf&quot;&gt;
+&lt;body ng-controller=&quot;layoutCtrl&quot;&gt;
+    &lt;div ng-include=&quot;'layout/_navbar.html'&quot;&gt;&lt;/div&gt;
+    &lt;container&gt;
+        &lt;div ng-view &gt;&lt;/div&gt;
+        &lt;div ng-if=&quot;debug&quot;&gt;...&lt;/div&gt;
+    &lt;/container&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </section>
     </div>
-
 </div>
 
 <script src="lib/js/head.min.js"></script>
@@ -72,7 +168,7 @@
         center: true,
 
         theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
 
         // Parallax scrolling
         // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
