@@ -28,12 +28,22 @@
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
 
+    <!-- ng -->
+    <script src="../bower_components/angular/angular.js"></script>
+
     <style>
         .reveal pre{
             font-size: xx-large;
         }
         .reveal pre.small{
             font-size: large;
+        }
+
+        .reveal input {
+            font-size: x-large;
+            background-color: transparent;
+            border: none;
+            color: red;
         }
     </style>
 </head>
@@ -81,6 +91,7 @@
             <img src="../mockups/Dettaglio.png">
         </section>
         <section>
+            <h2>Agenda</h2>
             <ol>
                 <li>Single Page Application</li>
                 <li>Databinding</li>
@@ -90,6 +101,36 @@
                 <li>Servizi Web</li>
                 <li>Componenti</li>
             </ol>
+        </section>
+
+        <section>
+            <h2>The Basics</h2>
+            <div style="width:50%;float:left">
+<pre class="small" ><code data-trim>&lt;!doctype html&gt;
+&lt;html ng-app&gt;
+&lt;head&gt;
+    &lt;script src=&quot;angular.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div&gt;
+    &lt;label&gt;Name:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; ng-model=&quot;yourName&quot;
+           placeholder=&quot;Enter a name here&quot;&gt;
+    &lt;hr&gt;
+    &lt;h1&gt;Hello {{yourName}}!&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;  </code></pre>
+            </div>
+            <div style="width: 50%;float:left">
+                <div ng-app>
+                    <label>Name:</label>
+                    <input type="text" ng-model="yourName"
+                           placeholder="Enter a name here" >
+                    <hr>
+                    <h3>Hello {{yourName}}!</h3>
+                </div>
+            </div>
         </section>
         <section>
             <img src="../mockups/Home%20page.png">
