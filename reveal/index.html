@@ -53,7 +53,7 @@
 <div class="reveal">
 
     <!-- Any section element inside of this container is displayed as a slide -->
-    <div class="slides">
+    <div class="slides" ng-app="demo">
         <section>
             <h4>Angular Dev Conf</h4>
 
@@ -123,15 +123,39 @@
 &lt;/html&gt;  </code></pre>
             </div>
             <div style="width: 50%;float:left">
-                <div ng-app>
+                <div >
                     <label>Name:</label>
                     <input type="text" ng-model="yourName"
                            placeholder="Enter a name here" >
                     <hr>
                     <h3>Hello {{yourName}}!</h3>
                 </div>
+
             </div>
         </section>
+        <section>
+            <div >
+                <div ng-controller="demo2">
+                    <h3 ng-click="inc()" style="cursor:pointer">Counter is {{counter}}</h3>
+                </div>
+
+                <pre class="small"><code ng-non-bindable>&lt;div ng-app=&quot;demo&quot; ng-controller=&quot;demoCtrl&quot;&gt;
+    &lt;h3 ng-click=&quot;inc()&quot;&gt;Counter is {{counter}}&lt;/h3&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    angular.module('demo', []); // define
+    angular.module('demo') // reference
+        .controller('demoCtrl', function($scope){
+            $scope.counter = 0;
+            $scope.inc = function(){
+                $scope.counter++;
+            }
+        });
+&lt;/script&gt;</code></pre>
+            </div>
+
+        </section>
+
         <section>
             <img src="../mockups/Home%20page.png">
         </section>
@@ -204,18 +228,19 @@
 &lt;/html&gt;
             </code></pre>
         </section>
-        <section>
+        <section ng-non-bindable>
             <h2>Area di debug</h2>
             <pre><code>&lt;html ng-app=&quot;ngDevConf&quot;&gt;
 &lt;body ng-controller=&quot;layoutCtrl&quot;&gt;
     &lt;div ng-include=&quot;'layout/_navbar.html'&quot;&gt;&lt;/div&gt;
     &lt;container&gt;
         &lt;div ng-view &gt;&lt;/div&gt;
-        &lt;div ng-if=&quot;debug&quot;&gt;...&lt;/div&gt;
+        &lt;div ng-if=&quot;debug&quot;&gt;
+            &lt;pre&gt;{{ model | json}}&lt;/pre&gt;
+        &lt;/div&gt;
     &lt;/container&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-            </code></pre>
+&lt;/html&gt;</code></pre>
         </section>
         <section>
             <img src="../mockups/Home%20page.png">
@@ -290,6 +315,14 @@
         ]
     });
 
+
+    angular .module('demo', [])
+            .controller('demo2', function($scope){
+                $scope.counter = 0;
+                $scope.inc = function(){
+                    $scope.counter++;
+                }
+            });
 </script>
 
 </body>
