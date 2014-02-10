@@ -134,12 +134,13 @@
             </div>
         </section>
         <section>
+            <h3>Eventi</h3>
             <div >
-                <div ng-controller="demo2">
+                <div ng-controller="demo2" style="width: 30%;float:right;margin-top: 40px">
                     <h3 ng-click="inc()" style="cursor:pointer">Counter is {{counter}}</h3>
                 </div>
 
-                <pre class="small"><code ng-non-bindable>&lt;div ng-app=&quot;demo&quot; ng-controller=&quot;demoCtrl&quot;&gt;
+                <pre class="small" style="float:left;width: 70% ;"><code ng-non-bindable>&lt;div ng-app=&quot;demo&quot; ng-controller=&quot;demoCtrl&quot;&gt;
     &lt;h3 ng-click=&quot;inc()&quot;&gt;Counter is {{counter}}&lt;/h3&gt;
 &lt;/div&gt;
 &lt;script&gt;
@@ -246,9 +247,12 @@
             <img src="../mockups/Home%20page.png">
         </section>
         <section>
-            <img src="../mockups/Home%20page%20-%20Bindings.png">
+            <h3>View</h3>
+            <img src="../mockups/Home%20page%20-%20Bindings.png" style="width: 80%; margin-bottom: 80px">
         </section>
-        <section><pre class="small"><code data-trim>{
+        <section>
+            <h3>Model</h3>
+            <pre class="small"><code data-trim>{
     header:{
         "logo" :"../img/AngularJS-large.png",
         "spot" : "Angular is what HTML would have been had it..",
