@@ -244,12 +244,54 @@
 &lt;/html&gt;</code></pre>
         </section>
         <section>
-            <img src="../mockups/Home%20page.png">
+            <h3>Mockup</h3>
+            <img src="../mockups/Home%20page.png" style="width: 80%; margin-bottom: 80px">
         </section>
         <section>
             <h3>View</h3>
             <img src="../mockups/Home%20page%20-%20Bindings.png" style="width: 80%; margin-bottom: 80px">
         </section>
+        <section ng-non-bindable>
+            <h3>Template - Header</h3>
+        <pre class="small"><code>&lt;div class=&quot;jumbotron&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;img ng-src=&quot;{{vm.header.logo}}&quot; style=&quot;width: 100%;&quot;&gt;
+                &lt;p&gt;&lt;em&gt;&quot;{{vm.header.spot}}&quot;&lt;/em&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+
+                &lt;h3&gt;{{vm.header.title}}&lt;/h3&gt;
+
+                &lt;p&gt;{{vm.header.text}}&lt;/p&gt;
+
+                &lt;p&gt;&lt;a class=&quot;btn btn-primary btn-lg&quot; role=&quot;button&quot;
+                      href=&quot;{{vm.header.link.url}}&quot;
+                      target=&quot;_blank&quot;&gt;{{vm.header.link.text}}&lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+        </section>
+        <section ng-non-bindable>
+            <h3>Template - Marketing</h3>
+        <pre class="small"><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-4&quot; ng-repeat=&quot;slot in vm.marketing&quot;&gt;
+            &lt;img ng-src=&quot;{{slot.logo}}&quot; style=&quot;width: 90%&quot;/&gt;
+
+            &lt;p&gt;{{slot.text}}&lt;/p&gt;
+
+            &lt;p&gt;&lt;a class=&quot;btn btn-default&quot;
+                  href=&quot;{{slot.link.url}}&quot;
+                  target=&quot;_blank&quot;
+                  role=&quot;button&quot;&gt;{{slot.link.title}}&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre></section>
         <section>
             <h3>Model</h3>
             <pre class="small"><code data-trim>{
@@ -273,6 +315,16 @@
     },{...},{...}]
 }
         </code></pre></section>
+    <section >
+        <h3>Controller</h3>
+        <pre class="small" ><code >angular.module('ngDevConf').controller('homeCtrl', function ($scope, catalogService) {
+    catalogService.getHomeData().then(function(homeData){
+        $scope.vm = homeData;
+        $scope.setDebugInfo($scope.vm);
+    });
+});
+        </code></pre>
+    </section>
     </div>
 </div>
 
