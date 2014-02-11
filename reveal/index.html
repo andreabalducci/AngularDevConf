@@ -97,6 +97,32 @@
             <h4 class="fragment"><em>(..almeno.. un paio di volte)</em></h4>
         </section>
         <section>
+            <h3>Esperienze fatte negli ultimi 12 mesi</h3>
+            <p>
+                <ul>
+                    <li class="fragment">Gestione interventi <span class="fragment">+ IDE online</span></li>
+                    <li class="fragment">Intranet bancaria
+                        <span class="fragment">: documentale</span>
+                        <span class="fragment">, chat</span>
+                        <span class="fragment">, calendari</span>
+                        <span class="fragment">, ticketing</span>
+                        <span class="fragment">, workflow</span>
+                        <span class="fragment">, knowledge base</span>
+                        <span class="fragment">.. e altre 9.994 cose.</span>
+                        <p>
+                            <span class="fragment">Il tutto <em>naturalmente</em> realtime e async</span>
+                        </p>
+                    </li>
+                    <li class="fragment">
+                        Porting da iOS a Web
+                    </li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <h3><em>"se c'è riuscito lui..."</em></h3>
+        </section>
+        <section>
             <h2>The Master Plan</h2>
             <p>
                 <span class="fragment"> Realizzare una Single Page Application</span>
@@ -122,21 +148,9 @@
             <img src="../mockups/Dettaglio.png">
         </section>
         <section>
-            <h2>Agenda</h2>
-            <ol>
-                <li>Databinding</li>
-                <li>Templates</li>
-                <li>Controllers</li>
-                <li>Routing</li>
-                <li>Servizi Web</li>
-                <li>Componenti</li>
-            </ol>
-        </section>
-
-        <section>
             <h2>The Basics</h2>
             <div style="width:50%;float:left">
-<pre class="small" ><code data-trim>&lt;!doctype html&gt;
+<pre class="small" ><code ng-non-bindable>&lt;!doctype html&gt;
 &lt;html ng-app&gt;
 &lt;head&gt;
     &lt;script src=&quot;angular.min.js&quot;&gt;&lt;/script&gt;
@@ -358,8 +372,7 @@ function homeCtrl($scope, $http) {
          .then(function(result){
             $scope.vm = result.data;
          });
-});
-        </code></pre>
+}</code></pre>
     </section>
     <section>
         <h3>Talk is cheap... </h3>

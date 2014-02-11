@@ -83,7 +83,6 @@ angular.module('catalog', []).service('catalogService', function ($q, $http, $lo
         var defer = $q.defer();
 
         loadRemoteData().then(function (results) {
-            console.log('results', results);
             defer.resolve(filter(results, term));
         });
 
