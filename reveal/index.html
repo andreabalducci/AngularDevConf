@@ -73,13 +73,44 @@
 
         </section>
         <section>
-            <h2>The Master Plan</h2>
+                <div style="width:70%;float: left">
+                    <h3>Chi è questo losco figuro ?</h3>
+                    <div class="fragment">Andrea Balducci</div>
+                    <div class="fragment">Sviluppatore Enterprise</div>
+                    <div class="fragment" style="font-size: small"><em>(qualsiasi cosa voglia dire...)</em></div>
+                    <div style="margin-top:20px;" class="fragment">LOB Applications</div>
+                    <div style="margin-top:10px;">
+                        <span class="fragment">c++, </span>
+                        <span class="fragment">c#, </span>
+                        <span class="fragment">javascript + html5</span>
+                    </div>
+                </div>
+                <img src="avatar.jpg" style="width:25%;float: left">
         </section>
         <section>
+            <h3>Mmmm...</h3>
+            <h3 class="fragment"><em>Sarà mica il classico dev Windows che ora si spaccia da esperto di web?"</em></h3>
+        </section>
+        <section>
+            <h2>No! <span class="fragment">..non sono un esperto.</span></h2>
+            <h4 class="fragment">(ammetto di aver copiato da StackOverflow un paio di volte)</h4>
+            <h4 class="fragment"><em>(..almeno.. un paio di volte)</em></h4>
+        </section>
+        <section>
+            <h2>The Master Plan</h2>
             <p>
-                Come realizzare Single Page Applications sfruttando databinding bidirezionale, templates, routing,
-                controllers, componenti e servizi web creando passo passo un catalogo immagini.
+                <span class="fragment"> Realizzare una Single Page Application</span>
+                <span class="fragment"> sfruttando</span>
+                <span class="fragment"> databinding bidirezionale</span>
+                <span class="fragment">, templates</span>
+                <span class="fragment">, routing</span>
+                <span class="fragment">, controllers</span>
+                <span class="fragment">, componenti</span>
+                <span class="fragment"> e servizi web.</span>
             </p>
+        </section>
+        <section>
+            <h2>Creiamo passo passo un catalogo immagini.</h2>
         </section>
         <section>
             <img src="../mockups/Home%20page.png">
@@ -93,7 +124,6 @@
         <section>
             <h2>Agenda</h2>
             <ol>
-                <li>Single Page Application</li>
                 <li>Databinding</li>
                 <li>Templates</li>
                 <li>Controllers</li>
@@ -244,14 +274,56 @@
 &lt;/html&gt;</code></pre>
         </section>
         <section>
-            <img src="../mockups/Home%20page.png">
+            <h3>Mockup</h3>
+            <img src="../mockups/Home%20page.png" style="width: 80%; margin-bottom: 80px">
         </section>
         <section>
             <h3>View</h3>
             <img src="../mockups/Home%20page%20-%20Bindings.png" style="width: 80%; margin-bottom: 80px">
         </section>
+        <section ng-non-bindable>
+            <h3>Template - Header</h3>
+        <pre class="small"><code>&lt;div class=&quot;jumbotron&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;img ng-src=&quot;{{vm.header.logo}}&quot; style=&quot;width: 100%;&quot;&gt;
+                &lt;p&gt;&lt;em&gt;&quot;{{vm.header.spot}}&quot;&lt;/em&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+
+                &lt;h3&gt;{{vm.header.title}}&lt;/h3&gt;
+
+                &lt;p&gt;{{vm.header.text}}&lt;/p&gt;
+
+                &lt;p&gt;&lt;a class=&quot;btn btn-primary btn-lg&quot; role=&quot;button&quot;
+                      href=&quot;{{vm.header.link.url}}&quot;
+                      target=&quot;_blank&quot;&gt;{{vm.header.link.text}}&lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+        </section>
+        <section ng-non-bindable>
+            <h3>Template - Marketing</h3>
+        <pre class="small"><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-4&quot; ng-repeat=&quot;slot in vm.marketing&quot;&gt;
+            &lt;img ng-src=&quot;{{slot.logo}}&quot; style=&quot;width: 90%&quot;/&gt;
+
+            &lt;p&gt;{{slot.text}}&lt;/p&gt;
+
+            &lt;p&gt;&lt;a class=&quot;btn btn-default&quot;
+                  href=&quot;{{slot.link.url}}&quot;
+                  target=&quot;_blank&quot;
+                  role=&quot;button&quot;&gt;{{slot.link.title}}&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre></section>
         <section>
-            <h3>Model</h3>
+            <h3><span class="fragment">View</span>Model</h3>
             <pre class="small"><code data-trim>{
     header:{
         "logo" :"../img/AngularJS-large.png",
@@ -273,6 +345,36 @@
     },{...},{...}]
 }
         </code></pre></section>
+    <section >
+        <h3>Controller</h3>
+        <pre class="xsmall" ><code >angular.module('ngDevConf')
+       .controller(
+            'homeCtrl',
+            ['$scope', '$http', homeCtrl]
+       );
+
+function homeCtrl($scope, $http) {
+    $http.get('../catalog/index.json')
+         .then(function(result){
+            $scope.vm = result.data;
+         });
+});
+        </code></pre>
+    </section>
+    <section>
+        <h3>Talk is cheap... </h3>
+        <h2 class="fragment"><em>Show me the code!</em></h2>
+    </section>
+    <section>
+        <h3 class="fragment">One more thing</h3>
+    </section>
+        <section>
+            <h1 class="fragment">angularjsday.it</h1>
+            <h4 class="fragment">21 Marzo 2014 - Ancona</h4>
+    </section>
+    <section>
+        <h2><em>Grazie!</em></h2>
+    </section>
     </div>
 </div>
 
