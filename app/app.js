@@ -1,5 +1,10 @@
 angular
-    .module('ngDevConf', ['ngRoute', 'ngAnimate', 'catalog',  'google-maps'])
+    .module('ngDevConf', [
+            'ngRoute'
+        ,   'catalog'
+        ,   'google-maps'
+        ,   'ngAnimate'
+    ])
     .config(['$routeProvider',
         function ($routeProvider) {
             $routeProvider.

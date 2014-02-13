@@ -8,6 +8,7 @@
         <img ng-src="{{vm.image.uri}}" style="width: 100%">
     </div>
     <div class="col-md-7">
+        <div ng-if="vm.description" ng-bind-html="vm.description"></div>
         <div ng-if="vm.image.map">
             <google-map
                     center='vm.image.map.center'
@@ -19,10 +20,9 @@
 
             </google-map>
         </div>
-
-        <btn class="btn btn-primary" ng-if="vm.showBack">
+        <a class="btn btn-primary" ng-if="vm.showBack" href="#/search">
             <span class="glyphicon glyphicon-backward"></span>
             back to search
-        </btn>
+        </a>
     </div>
 </div>

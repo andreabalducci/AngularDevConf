@@ -43,7 +43,8 @@
         "id":4,
         "title": "Demo",
         "uri": "../catalog/4.jpg",
-        "location": "Castelfidardo"
+        "location": "Castelfidardo",
+        "description":"<h3>Al lavoro sulla demo per la conf su <strong>AngularJS</strong><br/>Veramente un <em>bello strumento!!!</em></h3>"
     },
     {
         "id":5,
